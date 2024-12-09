@@ -1,0 +1,97 @@
+/* Body styles for themes */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+  background-color: #e7e7e7;
+  color: #000000;
+}
+
+body.dark-mode {
+  background-color: #151727;
+  color: #ffffff;
+}
+
+/* Toggle container styles */
+.toggle-container {
+  position: fixed; /* Fixed position to remain in place */
+  bottom: 10px; /* Position button at the bottom */
+  right: 20px; /* Align button to the right */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Responsive positioning */
+@media (max-width: 480px) {
+  .toggle-container {
+      bottom: 10px; /* Adjust bottom positioning for smaller screens */
+      right: 10px; /* Adjust right positioning for smaller screens */
+  }
+}
+
+/* Toggle switch styles */
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  width: 50px;
+  height: 25px;
+  background: #ccc;
+  display: block;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-label:hover {
+  background: #bbb;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  background: #353b35;
+}
+
+.toggle-button {
+  
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5px;
+  left: 3px;
+  transition: left 0.3s;
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-button {
+  left: 27px;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 480px) {
+  .toggle-label {
+      width: 40px;
+      height: 20px;
+  }
+
+  .toggle-button {
+      width: 16px;
+      height: 16px;
+  }
+
+  .toggle-checkbox:checked + .toggle-label .toggle-button {
+      left: 22px;
+  }
+
+  .toggle-container {
+      bottom: 5px; /* Adjust bottom positioning even further as needed */
+      right: 5px; /* Adjust right positioning even further as needed */
+  }
+}

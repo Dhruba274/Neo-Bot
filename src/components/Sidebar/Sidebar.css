@@ -1,0 +1,297 @@
+.sidebar {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #7c8c9e;
+    padding: 25px 15px;
+    transition: transform 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    
+    
+}
+
+
+.sidebar img {
+    width: 20px;
+}
+
+.sidebar .hamburger-menu {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url('hamburger-icon.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1100;
+}
+
+.sidebar .new-chat {
+    margin: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #e3e7ef;
+    border-radius: 50px;
+    font-size: 14px;
+    color: gray;
+    cursor: pointer;
+}
+
+.sidebar .recent {
+    display: flex;
+    flex-direction: column;
+    animation: fadein 1.5s;
+}
+
+.sidebar .recent-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #524e4e;
+}
+
+.sidebar .recent-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 50px;
+    color: #282828;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.sidebar .recent-entry:hover {
+    background-color: #E2E6EB;
+}
+
+.sidebar .delete-icon {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin-left: auto;
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s, filter 0.2s;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.sidebar .recent-entry:hover .delete-icon {
+    opacity: 1;
+    transform: scale(1.2);
+    pointer-events: auto;
+}
+
+.sidebar .delete-icon:hover {
+    filter: grayscale(0) brightness(0.7) sepia(1) hue-rotate(0deg) saturate(10);
+    transform: scale(1.4);
+}
+
+.sidebar .bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .bottom-item {
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width: 1024px) {
+    .sidebar {
+        /* min-height: 100vh; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #7c8c9e;
+        padding: 25px 15px;
+        transition: transform 0.3s ease;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        
+        
+    }
+   
+
+    .sidebar img {
+        width: 18px;
+    }
+
+    .sidebar .new-chat {
+        font-size: 13px;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        /* min-height: 100vh; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #7c8c9e;
+        padding: 25px 15px;
+        transition: transform 0.3s ease;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        
+        
+    }
+
+    .sidebar img {
+        width: 16px;
+    }
+
+    .sidebar .new-chat {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .sidebar .recent-title {
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .hamburger-menu {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        /* min-height: 100vh; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #7c8c9e;
+        padding: 25px 15px;
+        transition: transform 0.3s ease;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        
+        
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+        width: 140px;
+    }
+
+    .sidebar img {
+        width: 14px;
+    }
+
+    .sidebar .new-chat {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+
+    .sidebar .recent-title {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    .sidebar .recent-entry {
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .sidebar .delete-icon {
+        width: 12px;
+        right: 8px;
+    }
+
+    /* .bottom-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 10px;
+    }
+
+    .bottom-item p {
+        display: none;
+    } */
+
+    .hamburger-menu {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    .sidebar {
+        
+        min-height: 103vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #7c8c9e;
+        padding: 25px 15px;
+        transition: transform 0.3s ease;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        
+        
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+        width: 140px;
+    }
+
+    .sidebar img {
+        width: 12px;
+    }
+
+    .sidebar .new-chat {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    .sidebar .recent-title {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 10px;
+    }
+
+    .sidebar .recent-entry {
+        padding: 6px;
+        gap: 6px;
+    }
+
+    .sidebar .delete-icon {
+        width: 10px;
+        right: 6px;
+    }
+
+    /* .bottom-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 8px;
+    }
+
+    .bottom-item p {
+        display: none;
+    } */
+
+    .hamburger-menu {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+    }
+}
